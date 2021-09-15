@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #c5e4e7;
+    font-size: 18px;
+    font-family: 'Space Mono', monospace;
+}
+
+.content{
+    width: 55%;
+}
+
+.content  .hi{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 24px;
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    letter-spacing: 10px;
+}
+
+.calculator{
+    width: 100%;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%);
+    margin-top: 70px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calLeft,.calRight{
+    padding: 40px;
+    border-radius: 25px;
+    width: 50%;
+}
+
+.calRight{
+    background-color: hsl(183, 100%, 15%);
+}
+
+.calLeft p{
+    text-align: left;
+    font-size: 16px;
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.cal-input{
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 10px;
+    background-color:  hsl(189, 41%, 97%);
+    margin: 10px 0;
+    border: 2px solid transparent;
+    /* hsl(172, 67%, 45%) */
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.cal-input:focus-within{
+    border: 2px solid hsl(172, 67%, 45%);
+
+}
+
+.cal-input input{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: right;
+}
+.cal-input span{
+    display: flex;
+    align-items: center;
+}
+.cal-input span i{
+    color:  hsl(185, 41%, 84%);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.inputGroup{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    gap: 10px;
+}
+
+.inputItem{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    text-align: center;
+    padding: 7px 0 ;
+    width: 100%;
+    cursor: pointer;
+    border:2px solid transparent;
+    transition: all .5s;
+}
+
+.inputItem:nth-child(1):hover,.inputItem:nth-child(2):hover,.inputItem:nth-child(3):hover,.inputItem:nth-child(4):hover,.inputItem:nth-child(5):hover{
+    background-color: hsl(185, 41%, 84%);
+    border-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+.inputItem:last-child:focus-within{
+    background-color: white;
+    border-color: hsl(172, 67%, 45%);
+    color: hsl(184, 14%, 56%);
+}
+
+.calRightContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calRightContent p{
+    color: white;
+    margin-bottom: 0;
+}
+
+.calRightContent span{
+    color: white;
+    opacity: .5;
+    font-size: 14px;
+}
+
+.calRightContent div:nth-child(2) b{
+    color: hsl(172, 67%, 45%);
+    font-size: 54px;
+    font-weight: 700;
+}
+
+.calRight button{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    margin-top: 140px;
+    width: 100%;
+    padding: 10px 25px;
+    text-align: center;
+    background-color:   hsl(172, 67%, 45%);
+    cursor: not-allowed;
+    color: hsl(183, 100%, 15%);
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+    opacity: .3;
+}
+
+.activeItem{
+    color: hsl(183, 100%, 15%);
+    background-color:   hsl(172, 67%, 45%);
+}
+
